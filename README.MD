@@ -29,6 +29,7 @@ wget https://evergreen-ils.org/downloads/opensrf-3.2.0.tar.gz
 tar xvf opensrf-3.2.0.tar.gz
 cd opensrf-3.2.0/
 '''
+
 2. Install OpenSRF using Makefile.install prerequisite installer as root
 '''
 sudo apt-get install make
@@ -36,5 +37,16 @@ make -f src/extras/Makefile.install ubuntu-bionic
 '''
 note: Makefile.install will only run on ubuntu-bionic and ubuntu-xenial
 
+note: If you get error where C compiler was not found in $PATH, run the following command:
+'''
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install build-essential
+'''
+
+If you get "configure: error: could not determine apache version number":
+'''
+sudo apt-get install apache2...nope will try again
+'''
 left off on 5. Configuration and compilation instructions
 (https://evergreen-ils.org/documentation/install/OpenSRF/README_3_2_0.html)
